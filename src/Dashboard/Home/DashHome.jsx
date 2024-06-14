@@ -30,7 +30,7 @@ function DashHome() {
   const { data: users = [] } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axiosSecure(`http://localhost:5000/users`);
+      const res = await axiosSecure(`https://dream-it-server-five.vercel.app/users`);
       return res.data;
     },
   });

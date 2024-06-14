@@ -7,7 +7,7 @@ function AllUser() {
   const { data: users = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
-      const res = await axios.get(`http://localhost:5000/users`);
+      const res = await axios.get(`https://dream-it-server-five.vercel.app/users`);
       return res.data;
     },
   });
@@ -15,7 +15,7 @@ function AllUser() {
   const filterUser = users.filter(item => item?.role != "teacher" || item?.role != "admin");
 
   const addTeacher = id => {
-    axios.patch(`http://localhost:5000/users/${id}`);
+    axios.patch(`https://dream-it-server-five.vercel.app/users/${id}`);
     refetch();
     toast.success("Add To Teacher SuccessFully");
   };
