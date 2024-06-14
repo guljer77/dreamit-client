@@ -115,24 +115,26 @@ function Header() {
       </div>
       {profile && (
         <div className="absolute z-50 top-[68px] rounded right-[80px] bg-gray-200 p-5">
-          {user &&
-            isAdmin(
-              <Link
-                to="/dashboard"
-                className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2"
-              >
-                Dashboard
-              </Link>
-            )}
-          {user &&
-            isTeacher(
-              <Link
-                to="/teacher-dashboard"
-                className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2"
-              >
-                Dashboard
-              </Link>
-            )}
+          {user && isAdmin ? (
+            <Link
+              to="/dashboard"
+              className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2"
+            >
+              Dashboard
+            </Link>
+          ) : (
+            ""
+          )}
+          {user && isTeacher ? (
+            <Link
+              to="/teacher-dashboard"
+              className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2"
+            >
+              Dashboard
+            </Link>
+          ) : (
+            ""
+          )}
           <Link className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2">
             Profile
           </Link>
