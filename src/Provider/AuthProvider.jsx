@@ -53,7 +53,7 @@ function AuthProvider({ children }) {
       setUser(loggedUser);
       if (loggedUser) {
         axios
-          .post(`http://localhost:5000/jwt`, { email: loggedUser.email })
+          .post(`https://dream-it-server-five.vercel.app/jwt`, { email: loggedUser.email })
           .then(data => {
             localStorage.setItem("token", data.data.token);
             setLoading(false);
