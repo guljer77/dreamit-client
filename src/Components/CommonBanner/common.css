@@ -1,0 +1,21 @@
+.common-bg{
+  background-image: url('./../../assets/CommonBg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  z-index: 40;
+}
+.common-bg::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.6;
+  z-index: -40;
+}
