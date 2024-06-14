@@ -122,20 +122,11 @@ function Header() {
             >
               Dashboard
             </Link>
-          ) : user && isTeacher ? (
-            <Link
-              to="/teacher-dashboard"
-              className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2"
-            >
-              Dashboard
-            </Link>
           ) : (
-            ""
+            <Link className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2">
+              Profile
+            </Link>
           )}
-
-          <Link className="block px-[16px] bg-primary text-white py-[6px] rounded mb-2">
-            Profile
-          </Link>
           <a
             href=""
             onClick={logoutHere}
