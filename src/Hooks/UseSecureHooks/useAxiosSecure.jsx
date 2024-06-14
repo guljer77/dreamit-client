@@ -8,7 +8,7 @@ const useAxiosSecure = () => {
   const navigate = useNavigate();
 
   const axiosSecure = axios.create({
-    baseURL: `http://localhost:5000`,
+    baseURL: `https://dream-it-server-five.vercel.app`,
   });
 
   useEffect(() => {
